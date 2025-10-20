@@ -1,9 +1,13 @@
+import {BrowserRouter} from 'react-router-dom'
 import { createRoot } from 'react-dom/client'
-import './index.css'
+import { posts, comments, photos , users} from './Db/Db.js'
+
 import App from './App.jsx'
 
+import './index.css'
+
 createRoot(document.getElementById('root')).render(
-
-    <App />
-
+<BrowserRouter>
+    <App posts={posts} comments={comments} photos={photos} users={users} />
+</BrowserRouter>
 )
